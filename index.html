@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calculadora de gorjeta</title>
+  <meta name="description" content="Calcule a gorjeta a ser paga." />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Calculadora de gorjeta</h1>
+    </header>
+    
+    <main>
+      <form id="form-gorjeta">
+        <label for="preco-total">
+          <p>Quanto foi o total da conta?</p>
+        </label>
+        R$ <input required type="number" name="preco-total" id="preco-total" class="form-input" placeholder="Preço total" />
+        
+        <label for="qualidade-servico">
+          <p>Como você avalia o serviço?</p>
+        </label>
+        <select required name="qualidade-servico" id="qualidade-servico" class="form-select">
+          <option disabled selected value="">Escolha uma opção</option>
+          <option value="0.3">Incrível</option>
+          <option value="0.2">Bom</option>
+          <option value="0.15">Aceitável</option>
+          <option value="0.1">Ruim</option>
+          <option value="0.05">Péssimo</option>
+        </select>
+        
+        <label for="total-pessoas">
+          <p>Quantas pessoas vão dividir a conta?</p>
+         </label>
+        <input required type="number" name="total-pessoas" id="total-pessoas" placeholder="Número de pessoas" class="form-input" /> pessoas
+        
+        <p id="gorjeta"></p>
+        
+        <button type="submit" class="form-button">Calcular</button>
+        
+      </form>
+    </main>
+    
+    <footer>
+      <p>&copy; Matheus, 2021</p>
+    </footer>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
